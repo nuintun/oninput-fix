@@ -26,3 +26,6 @@ $('#input').input(callback);
 $('#input').off('input', callback);
 $('#input').uninput(callback);
 ```
+
+###Notice:
+Dot change input value in low version of ie without condition statement, because it will go into an infinite loop!
