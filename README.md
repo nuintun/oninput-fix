@@ -8,7 +8,7 @@ Default is CommonJS module
 
 If not CommonJS you must do this:
 
->1.Remove first and last line code
+>1.Remove first and last line of the code
 
 >2.Wrap code useing:
 ```js
