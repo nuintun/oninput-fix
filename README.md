@@ -16,6 +16,7 @@ If not CommonJS you must do this:
   // the code of remove first and last line
 }(jQuery))
 ```
+
 ###API:
 ```js
 $('#input').on('input', callback);
