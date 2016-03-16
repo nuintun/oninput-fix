@@ -18,7 +18,7 @@ If not CommonJS you must do this:
 ```
 
 ###API:
-Sample
+Sample:
 >
 ```js
 $('#input').on('input', callback);
