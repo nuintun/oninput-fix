@@ -46,6 +46,10 @@ if ('oninput' in INPUTNODE) {
     return $.event.dispatch.call(this, event);
   };
 
+  var IE9HackHander = function (event){
+    event.keyCode === 8 && $.event.trigger('input', null, this);
+  };
+
   $.event.special.input = {
     setup: function (){
       var element = this;
@@ -54,9 +58,7 @@ if ('oninput' in INPUTNODE) {
 
       addEventListener(element, 'input', handler);
 
-      ISIE9 && $.event.add(element, 'keydown.ie9-input-fix', function (event){
-        event.keyCode === 8 && $.event.trigger('input', null, this);
-      });
+      ISIE9 && $.event.add(element, 'keydown', IE9HackHander);
     },
     teardown: function (){
       var element = this;
@@ -65,7 +67,7 @@ if ('oninput' in INPUTNODE) {
 
       removeEventListener(element, 'input', handler);
 
-      ISIE9 && $.event.remove(element, 'keydown.ie9-input-fix');
+      ISIE9 && $.event.remove(element, 'keydown', IE9HackHander);
     }
   };
 } else if ('onpropertychange' in INPUTNODE) {
