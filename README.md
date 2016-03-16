@@ -8,8 +8,10 @@ Default is CommonJS module
 
 If not CommonJS you must do this:
 
-1.Remove first and last line code
-2.Wrap code useing:
+>1.Remove first and last line code
+
+>2.Wrap code useing:
+
 ```js
 (function($){
   // the code of remove first and last line
