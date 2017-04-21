@@ -1,9 +1,8 @@
-oninput-fix
-=========
+# oninput-fix
 
 >Fix input event in jquery, support low version of ie.
 
-###Introduction:
+### Introduction:
 Default is CommonJS module
 
 If not CommonJS you must do this:
@@ -17,7 +16,7 @@ If not CommonJS you must do this:
 }(jQuery));
 ```
 
-###API:
+### API:
 Sample:
 >
 ```js
@@ -27,5 +26,5 @@ $('#input').off('input', callback);
 $('#input').uninput(callback);
 ```
 
-###Notice:
+### Notice:
 Dot change input value in low version of ie without condition statement, because it will go into an infinite loop!
