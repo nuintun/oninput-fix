@@ -2,7 +2,7 @@
 
 var $ = require('jquery');
 
-var INPUTRE = /^INPUT|TEXTAREA$/;
+var INPUTRE = /^INPUT|TEXTAREA$/i;
 var INPUTNODE = document.createElement('input');
 var ISIE9 = /MSIE 9.0;/i.test(navigator.appVersion || '');
 
